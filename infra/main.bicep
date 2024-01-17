@@ -19,7 +19,7 @@ param searchServiceName string = ''
 param searchServiceResourceGroupName string = ''
 param searchServiceResourceGroupLocation string = location
 
-param searchServiceSkuName string = 'basic'
+param searchServiceSkuName string = 'free'
 param searchIndexName string // Set in main.parameters.json
 
 param storageAccountName string = ''
@@ -48,11 +48,11 @@ param formRecognizerSkuName string = 'S0'
 
 param chatGptDeploymentName string // Set in main.parameters.json
 param chatGptDeploymentCapacity int = 30
-param chatGptModelName string = 'gpt-35-turbo-16k'
+param chatGptModelName string = 'gpt-4'
 param chatGptModelVersion string = '0613'
-param embeddingDeploymentName string = 'embedding'
-param embeddingDeploymentCapacity int = 30
-param embeddingModelName string = 'text-embedding-ada-002'
+param embeddingDeploymentName string = ''
+param embeddingDeploymentCapacity int = ''
+param embeddingModelName string = ''
 
 @description('Id of the user or app to assign application roles')
 param principalId string = ''
@@ -124,7 +124,7 @@ module backend 'core/host/appservice.bicep' = {
     tags: union(tags, { 'azd-service-name': 'backend' })
     appServicePlanId: appServicePlan.outputs.id
     runtimeName: 'python'
-    runtimeVersion: '3.10'
+    runtimeVersion: '3.11'
     appCommandLine: 'python3 -m gunicorn main:app'
     scmDoBuildDuringDeployment: true
     managedIdentity: true
