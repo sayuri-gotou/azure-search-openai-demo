@@ -19,7 +19,7 @@ param searchServiceName string = ''
 param searchServiceResourceGroupName string = ''
 param searchServiceResourceGroupLocation string = location
 
-param searchServiceSkuName string = 'free'
+param searchServiceSkuName string = 'basic'
 param searchIndexName string // Set in main.parameters.json
 
 param storageAccountName string = ''
@@ -48,7 +48,7 @@ param formRecognizerSkuName string = 'S0'
 
 param chatGptDeploymentName string // Set in main.parameters.json
 param chatGptDeploymentCapacity int = 30
-param chatGptModelName string = 'gpt-4'
+param chatGptModelName string = 'gpt-35-turbo-16k'
 param chatGptModelVersion string = '0613'
 param embeddingDeploymentName string = ''
 param embeddingDeploymentCapacity int = 30
