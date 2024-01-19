@@ -51,7 +51,7 @@ param chatGptDeploymentCapacity int = 30
 param chatGptModelName string = 'gpt-4'
 param chatGptModelVersion string = '0613'
 param embeddingDeploymentName string = ''
-param embeddingDeploymentCapacity int = '30'
+param embeddingDeploymentCapacity int = 30
 param embeddingModelName string = ''
 
 @description('Id of the user or app to assign application roles')
