@@ -16,3 +16,18 @@ source = ["scripts", "app"]
 
 [tool.coverage.report]
 show_missing = true
+
+[tool.poetry]
+name = "azure-search-openai-demo"
+version = "0.1.0"
+description = ""
+authors = ["sayuri-gotou <s-gotou@core.co.jp>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
